@@ -1,0 +1,392 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Alamjit Singh</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an editing suite — a live timeline as the opener, work laid out as clip thumbnails, then skills, training and a plain contact sheet. */
+:root{
+  --bg:#EDEFF3; --surface:#F8F9FB; --ink:#141821; --muted:#566074; --line:#D2D7E0; --track:#E1E5EC;
+  --accent:#F2A900; --accent-ink:#875A00; --rec:#E5484D; --on-accent:#141821;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  /* clip artwork colours: identical in both themes, like footage */
+  --c-teal:#0B6E78; --c-stone:#7A5A3A; --c-night:#1B2232; --c-saffron:#E8862A; --c-indigo:#34449C; --c-leaf:#2F7A43;
+  --c-paper:#FFFFFF; --c-dark:#141821;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1117; --surface:#161A22; --ink:#E8EBF0; --muted:#9AA2B1; --line:#2A313D; --track:#1B2029;
+    --accent:#F5B921; --accent-ink:#F5B921; --rec:#FF6369; --on-accent:#141821; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1117; --surface:#161A22; --ink:#E8EBF0; --muted:#9AA2B1; --line:#2A313D; --track:#1B2029;
+  --accent:#F5B921; --accent-ink:#F5B921; --rec:#FF6369; --on-accent:#141821; color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--mono)}
+.eyebrow{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* ---------- Hero ---------- */
+.hero{padding-block:56px 28px;display:grid;gap:20px}
+.hero h1{font-family:var(--display);font-stretch:125%;font-weight:850;font-size:clamp(3.1rem,11vw,8.4rem);line-height:.88;letter-spacing:-.025em;margin:0;text-wrap:balance}
+.hero h1 .cut{color:var(--accent-ink)}
+.lede{max-width:58ch;font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--muted);margin:0}
+.lede strong{color:var(--ink);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;border:1px solid var(--line);text-decoration:none;font-weight:600;font-size:.95rem;background:var(--surface);transition:transform .15s ease,border-color .15s ease}
+.btn:hover{border-color:var(--ink);transform:translateY(-1px)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn .dot{width:8px;height:8px;border-radius:50%;background:var(--rec)}
+
+/* ---------- Timeline ---------- */
+.timeline{padding-block:8px 48px}
+.tl{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 14px 16px;overflow:hidden}
+.tl-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.tc{font-size:1.05rem;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.tc b{color:var(--rec);font-weight:500}
+.tl-meta{font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.grid-tl{--name:34px;position:relative}
+.ruler{display:flex;justify-content:space-between;padding-left:var(--name);font-size:.7rem;color:var(--muted);font-variant-numeric:tabular-nums;height:22px;align-items:flex-start;
+  background-image:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 2.5%);background-position:var(--name) 100%;background-size:calc(100% - var(--name)) 6px;background-repeat:no-repeat}
+.trk{display:flex;align-items:stretch;height:38px;margin-top:6px}
+.tname{width:var(--name);flex:none;font-size:.72rem;color:var(--muted);display:flex;align-items:center}
+.lane{position:relative;flex:1;min-width:0;background:var(--track);border-radius:6px}
+.clip{position:absolute;top:3px;bottom:3px;border-radius:5px;font-style:normal;font-size:.74rem;font-weight:600;padding:0 9px;display:flex;align-items:center;white-space:nowrap;overflow:hidden;color:var(--c-paper)}
+.clip.k-docs{background:var(--c-indigo)}
+.clip.k-reels{background:var(--c-teal)}
+.clip.k-shorts{background:var(--c-night)}
+.clip.k-motion{background:var(--c-saffron);color:var(--c-dark)}
+.clip.k-3d{background:var(--c-leaf)}
+.clip.k-vo{background:transparent;color:var(--muted);padding:0;gap:1px;align-items:center}
+.clip.k-vo i{flex:1;min-width:1px;background:var(--accent);border-radius:1px;opacity:.85}
+.playhead{position:absolute;top:22px;bottom:-4px;left:var(--name);width:2px;background:var(--rec);animation:sweep 2.4s cubic-bezier(.6,.05,.2,1) .3s forwards}
+.playhead::before{content:"";position:absolute;top:-8px;left:-5px;border:6px solid transparent;border-top:8px solid var(--rec)}
+@keyframes sweep{to{left:calc(var(--name) + (100% - var(--name)) * .62)}}
+@media (prefers-reduced-motion:reduce){.playhead{animation:none;left:calc(var(--name) + (100% - var(--name)) * .62)}.btn{transition:none}}
+@media (max-width:540px){.clip.hide-sm{font-size:0}}
+
+/* ---------- Sections ---------- */
+section.block{padding-block:44px}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-top:1px solid var(--ink);padding-top:14px;margin-bottom:26px}
+.sec-head h2{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:clamp(1.7rem,3.6vw,2.5rem);letter-spacing:-.01em;margin:0;line-height:1.05}
+.sec-head p{margin:0;color:var(--muted);font-size:.95rem;max-width:44ch}
+
+/* ---------- Work ---------- */
+.works{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px}
+@media (max-width:900px){.works{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.works{grid-template-columns:1fr}}
+.work{display:flex;flex-direction:column;gap:12px;min-width:0}
+.thumb{position:relative;display:block;aspect-ratio:16/10;max-width:100%;border-radius:12px;overflow:hidden;text-decoration:none;color:var(--c-paper);isolation:isolate}
+a.thumb{transition:transform .2s ease}
+a.thumb:hover{transform:translateY(-2px)}
+.thumb .t-title{position:absolute;left:16px;bottom:14px;right:16px;font-family:var(--display);font-stretch:120%;font-weight:850;font-size:clamp(1.35rem,2.4vw,1.75rem);line-height:.95;letter-spacing:-.01em;z-index:2}
+.thumb .t-ratio{position:absolute;top:12px;right:12px;font-family:var(--mono);font-size:.68rem;padding:3px 7px;border-radius:4px;background:rgba(0,0,0,.35);color:var(--c-paper);z-index:2}
+.thumb svg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.th-bunty{background:var(--c-teal)}
+.th-estate{background:var(--c-stone)}
+.th-docs{background:var(--c-night)}
+.th-punjab{background:var(--c-saffron);color:var(--c-dark)}
+.th-india{background:var(--c-indigo)}
+.th-sprout{background:var(--c-leaf)}
+.th-docs .big60{position:absolute;right:14px;top:6px;font-family:var(--display);font-stretch:125%;font-weight:900;font-size:clamp(3.4rem,7vw,5rem);line-height:1;color:var(--accent);z-index:2}
+.th-india .years{position:absolute;left:16px;top:14px;font-family:var(--mono);font-size:.78rem;opacity:.85;z-index:2}
+.meta .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 4px}
+.meta h3{margin:0 0 4px;font-size:1.12rem;font-weight:600}
+.meta p.d{margin:0;color:var(--muted);font-size:.95rem}
+.meta .lnk{display:inline-block;margin-top:6px;font-size:.88rem;font-weight:600;text-underline-offset:3px}
+
+/* ---------- Skills ---------- */
+.skills{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
+@media (max-width:900px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.skills{grid-template-columns:1fr}}
+.skill{border-top:3px solid var(--accent);padding-top:12px;min-width:0}
+.skill h3{margin:0 0 8px;font-size:1.05rem;font-weight:600}
+.skill ul{margin:0;padding:0;list-style:none;display:grid;gap:5px;color:var(--muted);font-size:.94rem}
+.soft{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.tools{margin-top:22px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;font-weight:600}
+.tools .tlbl{font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-ink)}
+.chip{font-size:.85rem;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+
+/* ---------- Training ---------- */
+.rows{display:grid;gap:0;border-bottom:1px solid var(--line)}
+.row{display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:16px;padding:14px 0;border-top:1px solid var(--line);align-items:baseline}
+.row .when{font-family:var(--mono);font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.row .what b{font-weight:600}
+.row .what span{display:block;color:var(--muted);font-size:.92rem}
+.row .grade{font-family:var(--mono);font-size:.82rem;color:var(--muted);text-align:right}
+@media (max-width:560px){.row{grid-template-columns:1fr auto}.row .when{grid-column:1/-1}}
+
+/* ---------- Contact ---------- */
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px clamp(18px,4vw,40px);display:grid;gap:22px}
+.contact h2{font-family:var(--display);font-stretch:125%;font-weight:850;font-size:clamp(2rem,6vw,3.6rem);line-height:.95;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.lines{display:grid;gap:12px}
+.cl{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding-top:12px;border-top:1px solid var(--line)}
+.cl .lbl{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);width:84px;flex:none}
+.cl .val{font-size:clamp(1.05rem,2.4vw,1.35rem);font-weight:600;min-width:0;overflow-wrap:anywhere;user-select:all}
+.copy{margin-left:auto;font:inherit;font-size:.82rem;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.copy:hover{border-color:var(--ink)}
+footer{padding-block:28px 40px;color:var(--muted);font-size:.85rem}
+</style>
+
+<header class="hero wrap">
+  <p class="eyebrow mono">Video Editor &amp; Graphic Designer · Punjab, India</p>
+  <h1>Alamjit<br>Singh<span class="cut">.</span></h1>
+  <p class="lede">I edit <strong>long-form documentaries</strong> and <strong>short-form Reels and Shorts</strong>, and design the graphics that go with them. Five years of editing, from client Reels to my own YouTube channel, with AI tools built into how I work.</p>
+  <div class="ctas">
+    <a class="btn primary" href="https://www.youtube.com/@Theonemindocs" target="_blank" rel="noopener"><span class="dot" aria-hidden="true"></span>Watch my channel</a>
+    <a class="btn" href="#contact">Hire me</a>
+  </div>
+</header>
+
+<section class="timeline wrap" aria-label="What I edit, shown as an editing timeline">
+  <div class="tl">
+    <div class="tl-head">
+      <span class="tc mono"><b>TC</b> 00:00:37:05</span>
+      <span class="tl-meta mono">25 fps · 1080 × 1920 · 1920 × 1080</span>
+    </div>
+    <div class="grid-tl" aria-hidden="true">
+      <div class="ruler mono"><span>00:00</span><span>00:15</span><span>00:30</span><span>00:45</span><span>01:00</span></div>
+      <div class="trk"><span class="tname mono">V2</span><div class="lane">
+        <i class="clip k-motion" style="left:3%;width:31%">Motion graphics</i>
+        <i class="clip k-3d hide-sm" style="left:57%;width:24%">3D · Blender</i>
+      </div></div>
+      <div class="trk"><span class="tname mono">V1</span><div class="lane">
+        <i class="clip k-docs" style="left:0;width:45%">Documentaries</i>
+        <i class="clip k-reels hide-sm" style="left:46%;width:27%">Reels</i>
+        <i class="clip k-shorts hide-sm" style="left:74%;width:26%">Shorts</i>
+      </div></div>
+      <div class="trk"><span class="tname mono">A1</span><div class="lane">
+        <i class="clip k-vo" id="wave" style="left:6px;right:6px"></i>
+      </div></div>
+      <div class="playhead"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block wrap" id="work">
+  <div class="sec-head">
+    <h2>Selected work</h2>
+    <p>Client Reels, my own documentary Shorts, long-form history videos and a 3D short.</p>
+  </div>
+  <div class="works">
+
+    <article class="work">
+      <a class="thumb th-bunty" href="https://www.instagram.com/bunty.mobile.repair/" target="_blank" rel="noopener" aria-label="Bunty Mobile Repair on Instagram">
+        <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect x="196" y="22" width="78" height="150" rx="14" fill="none" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="3"/>
+          <circle cx="216" cy="42" r="6" fill="#FFFFFF" fill-opacity=".9"/><circle cx="232" cy="42" r="6" fill="#FFFFFF" fill-opacity=".9"/>
+          <path d="M206 120 L228 104 L222 92 L246 78 L240 66 L262 58" fill="none" stroke="#F5B921" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="t-ratio">9:16</span>
+        <span class="t-title">Repair<br>Reels</span>
+      </a>
+      <div class="meta">
+        <p class="tag">Client · Instagram Reels</p>
+        <h3>Bunty Mobile Repair</h3>
+        <p class="d">Repair-process and product Reels for a phone repair shop. The top Reel has passed 2,000 views.</p>
+        <a class="lnk" href="https://www.instagram.com/bunty.mobile.repair/" target="_blank" rel="noopener">See the page ↗</a>
+      </div>
+    </article>
+
+    <article class="work">
+      <div class="thumb th-estate" role="img" aria-label="Property tour Reels">
+        <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path d="M180 112 L238 62 L296 112 V176 H180 Z" fill="none" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="226" y="134" width="24" height="42" fill="#F5B921"/>
+          <rect x="196" y="122" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="2.5"/>
+          <rect x="262" y="122" width="18" height="18" fill="none" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="2.5"/>
+        </svg>
+        <span class="t-ratio">9:16</span>
+        <span class="t-title">Property<br>tours</span>
+      </div>
+      <div class="meta">
+        <p class="tag">Client · Real estate</p>
+        <h3>Property tour Reels</h3>
+        <p class="d">Raw walkthrough footage turned into short tours with captions, music and a premium finish.</p>
+      </div>
+    </article>
+
+    <article class="work">
+      <a class="thumb th-docs" href="https://www.youtube.com/@Theonemindocs" target="_blank" rel="noopener" aria-label="The One min docs on YouTube">
+        <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <circle cx="70" cy="70" r="42" fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2"/>
+          <ellipse cx="70" cy="70" rx="18" ry="42" fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2"/>
+          <path d="M28 70 H112 M34 48 H106 M34 92 H106" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2"/>
+        </svg>
+        <span class="big60">60s</span>
+        <span class="t-ratio" style="top:auto;bottom:14px">9:16</span>
+        <span class="t-title" style="right:70px">The One<br>min docs</span>
+      </a>
+      <div class="meta">
+        <p class="tag">My channel · YouTube Shorts</p>
+        <h3>The One min docs</h3>
+        <p class="d">Fact and science Shorts I write, voice and edit myself, with map animations and documentary graphics.</p>
+        <a class="lnk" href="https://www.youtube.com/@Theonemindocs" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+      </div>
+    </article>
+
+    <article class="work">
+      <div class="thumb th-punjab" role="img" aria-label="History of Punjab documentary">
+        <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="none" stroke="#141821" stroke-width="2.5" stroke-linecap="round" stroke-opacity=".75">
+            <path d="M150 0 C180 40 160 80 200 120 S240 170 230 200"/>
+            <path d="M180 0 C210 40 190 80 230 120 S270 170 260 200"/>
+            <path d="M210 0 C240 40 220 80 260 120 S300 170 290 200"/>
+            <path d="M240 0 C270 40 250 80 290 120 S330 170 320 200"/>
+            <path d="M270 0 C300 40 280 80 320 120 S360 170 350 200"/>
+          </g>
+        </svg>
+        <span class="t-ratio">16:9</span>
+        <span class="t-title">Land of<br>five rivers</span>
+      </div>
+      <div class="meta">
+        <p class="tag">Long-form · Documentary</p>
+        <h3>How Punjab Became Punjab</h3>
+        <p class="d">A 2.5-minute history of Punjab with clean, documentary-style visuals and voiceover.</p>
+      </div>
+    </article>
+
+    <article class="work">
+      <div class="thumb th-india" role="img" aria-label="Story of India documentary">
+        <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path d="M20 128 H300" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/>
+          <g fill="#F5B921"><circle cx="40" cy="128" r="6"/><circle cx="120" cy="128" r="4"/><circle cx="190" cy="128" r="4"/><circle cx="250" cy="128" r="4"/><circle cx="290" cy="128" r="7"/></g>
+        </svg>
+        <span class="years">3300 BCE → 1947</span>
+        <span class="t-ratio">16:9</span>
+        <span class="t-title">The story<br>of India</span>
+      </div>
+      <div class="meta">
+        <p class="tag">Long-form · Documentary</p>
+        <h3>Story of India &amp; The Computer</h3>
+        <p class="d">Two 5-minute documentaries: India from the Indus Valley to 1947, and how the computer became the computer.</p>
+      </div>
+    </article>
+
+    <article class="work">
+      <div class="thumb th-sprout" role="img" aria-label="The Last Sprout, a 3D animated short">
+        <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect x="196" y="60" width="54" height="50" rx="8" fill="none" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="3"/>
+          <circle cx="212" cy="82" r="5" fill="#F5B921"/><circle cx="234" cy="82" r="5" fill="#F5B921"/>
+          <path d="M223 60 V46" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="3" stroke-linecap="round"/>
+          <rect x="204" y="110" width="38" height="44" rx="6" fill="none" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="3"/>
+          <path d="M282 156 V128" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+          <path d="M282 136 C270 132 264 122 266 114 C276 116 282 124 282 136 Z M282 132 C292 126 300 126 304 120 C298 112 286 118 282 132 Z" fill="#B8E986"/>
+          <path d="M170 156 H310" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="2"/>
+        </svg>
+        <span class="t-ratio">9:16</span>
+        <span class="t-title">The Last<br>Sprout</span>
+      </div>
+      <div class="meta">
+        <p class="tag">3D animation · Blender</p>
+        <h3>The Last Sprout</h3>
+        <p class="d">A 20-second animated short about a robot guarding the last sprout, modelled and animated in Blender.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="block wrap" id="skills">
+  <div class="sec-head">
+    <h2>What I do</h2>
+    <p>From the first cut to the thumbnail, I can handle a video on my own or as part of a team.</p>
+  </div>
+  <div class="skills">
+    <div class="skill">
+      <h3>Video editing</h3>
+      <ul><li>Long-form YouTube videos</li><li>Reels and Shorts (9:16)</li><li>Documentary-style edits</li><li>Captions, colour, sound design</li></ul>
+    </div>
+    <div class="skill">
+      <h3>AI-powered editing</h3>
+      <ul><li>AI video and image generation</li><li>AI voiceover (ElevenLabs)</li><li>Auto captions</li><li>Faster AI-assisted workflows</li></ul>
+    </div>
+    <div class="skill">
+      <h3>Motion &amp; 3D</h3>
+      <ul><li>Map animations</li><li>Explainer motion graphics</li><li>3D animation in Blender</li></ul>
+    </div>
+    <div class="skill">
+      <h3>Graphic design</h3>
+      <ul><li>YouTube thumbnails</li><li>Social media posts</li><li>Title cards and branding</li></ul>
+    </div>
+  </div>
+  <div class="soft" aria-label="Personal skills">
+    <span class="chip">Creative eye for detail</span>
+    <span class="chip">Meets deadlines</span>
+    <span class="chip">Clear client communication</span>
+    <span class="chip">Quick learner</span>
+    <span class="chip">Open to feedback</span>
+  </div>
+  <div class="tools"><span class="tlbl mono">Software</span><span>CapCut · Adobe Creative Cloud · Blender · ElevenLabs · AI video and image tools</span></div>
+</section>
+
+<section class="block wrap" id="training">
+  <div class="sec-head">
+    <h2>Education &amp; training</h2>
+    <p>Currently pursuing a BCA alongside editing work.</p>
+  </div>
+  <div class="rows">
+    <div class="row"><span class="when">Pursuing</span><span class="what"><b>BCA, 5th semester</b><span>Guru Arjan Dev Khalsa College, Chohla Sahib · Guru Nanak Dev University</span></span><span class="grade"></span></div>
+    <div class="row"><span class="when">2024 – 2025</span><span class="what"><b>Web Development Diploma</b><span>STP Computer Education · 12 months</span></span><span class="grade">Grade B</span></div>
+    <div class="row"><span class="when">2023 – 2024</span><span class="what"><b>DCA, Diploma in Computer Applications</b><span>STP Computer Education · 6 months</span></span><span class="grade">Grade B</span></div>
+    <div class="row"><span class="when">2023</span><span class="what"><b>Basic Computer Course</b><span>STP Computer Education · 3 months</span></span><span class="grade">Grade A</span></div>
+    <div class="row"><span class="when">2023</span><span class="what"><b>Class XII, Commerce</b><span>Punjab School Education Board</span></span><span class="grade">76.4%</span></div>
+  </div>
+</section>
+
+<section class="block wrap" id="contact">
+  <div class="contact">
+    <p class="eyebrow mono">Available for full-time and freelance work</p>
+    <h2>Let's edit something together.</h2>
+    <div class="lines">
+      <div class="cl"><span class="lbl">Email</span><span class="val" id="v-email">alamchohla@gmail.com</span><button class="copy" type="button" id="copy-email" data-copy="alamchohla@gmail.com" aria-controls="v-email">Copy</button></div>
+      <div class="cl"><span class="lbl">Phone</span><span class="val" id="v-phone">+91 75290 74135</span><button class="copy" type="button" id="copy-phone" data-copy="+917529074135" aria-controls="v-phone">Copy</button></div>
+      <div class="cl"><span class="lbl">YouTube</span><a class="val" href="https://www.youtube.com/@Theonemindocs" target="_blank" rel="noopener">@Theonemindocs ↗</a></div>
+      <div class="cl"><span class="lbl">Based in</span><span class="val">Chohla Sahib, Tarn Taran, Punjab</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">Alamjit Singh · Video Editor &amp; Graphic Designer · English, Hindi, Punjabi</footer>
+
+<script>
+(function(){
+  var w=document.getElementById('wave');
+  if(w){
+    var seed=7, html='';
+    for(var i=0;i<90;i++){
+      seed=(seed*9301+49297)%233280;
+      var r=seed/233280;
+      var env=0.35+0.65*Math.abs(Math.sin(i/7));
+      var h=Math.max(12,Math.round((0.25+0.75*r)*env*100));
+      html+='<i style="height:'+h+'%"></i>';
+    }
+    w.innerHTML=html;
+  }
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var text=b.getAttribute('data-copy');
+      var reset=function(){setTimeout(function(){b.textContent='Copy';},1800);};
+      var fallback=function(){
+        var el=document.getElementById(b.getAttribute('aria-controls'));
+        try{var rg=document.createRange();rg.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(rg);}catch(e){}
+        b.textContent='Selected';reset();
+      };
+      try{
+        navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';reset();},fallback);
+      }catch(e){fallback();}
+    });
+  });
+})();
+</script>
+
+</body></html>
